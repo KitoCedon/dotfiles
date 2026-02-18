@@ -73,6 +73,8 @@
 
 (global-set-key (kbd "C-x ,") 'duplicate-line)
 
+(setq-default tab-width 4)
+
 ;;; Markdown-mode
 ;; always open the preview window at the right
 (setq markdown-split-window-direction 'right)
