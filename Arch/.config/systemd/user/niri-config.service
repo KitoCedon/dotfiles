@@ -1,0 +1,14 @@
+# custom
+
+[Unit]
+Description=Automatically switch niri config
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionPathExists=%h/.config/niri
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/niri/bin/niri-config.sh
+
+[Install]
+WantedBy=niri.service

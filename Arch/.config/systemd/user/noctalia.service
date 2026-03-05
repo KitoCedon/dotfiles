@@ -1,0 +1,15 @@
+# custom
+
+[Unit]
+Description=start noctalia
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=!XDG_CURRENT_DESKTOP=KDE
+
+[Service]
+Type=simple
+ExecStart=qs -c noctalia-shell
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
