@@ -74,7 +74,8 @@ desc = "run lazygit"
 - [llanosrocas/githead](https://github.com/llanosrocas/githead.yazi)
 - [SUSTech-data/max-preview](https://github.com/SUSTech-data/max-preview.yazi)
 - [sharklasers996/eza-preview](https://github.com/sharklasers996/eza-preview.yazi)
-- [*wl-clipboard(broken)*](https://github.com/grappas/wl-clipboard.yazi)
+- [alterkeyy/wl-clipboard.yazi](https://github.com/alterkeyy/wl-clipboard.yazi)
+- [*grappas/wl-clipboard(broken)*](https://github.com/grappas/wl-clipboard.yazi)
 
 #### Flavors
 
