@@ -36,6 +36,7 @@
 - [yazi](#yazi)
 - [lazygit](#lazygit)
 - [showmethekey](#showmethekey)
+- [boomer-wayland](#boomer-wayland)
 
 ---
 
@@ -59,7 +60,7 @@
 - [Rolv-Apneseth/starship](https://github.com/Rolv-Apneseth/starship.yazi)
 - lazygit Just need to add code below in ~/.config/yazi/keymap.toml
 
-```
+```toml
 [[mgr.prepend_keymap]]
 on   = [ "g", "i" ]
 run  = "shell --block --orphan lazygit"
