@@ -5,7 +5,7 @@
 
 // spawn-at-startup "qs" "-c" "noctalia-shell"
 // Custom settings
-spawn-at-startup "~/.config/niri/bin/display-config.sh"
+spawn-at-startup "~/.config/niri/bin/niri-config.sh"
 spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
@@ -440,6 +440,7 @@ binds {
     Mod+Alt+B hotkey-overlay-title="Toggle Bar Visibility" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
     Mod+Alt+V hotkey-overlay-title="Open a Clipboard" { spawn-sh "~/.local/bin/cliphist-fuzzel-img"; }
     Mod+Shift+C hotkey-overlay-title="Toggle Windows Floating and Center It" { spawn-sh "niri msg action toggle-window-floating;niri msg action center-column"; }
+	Mod+M hotkey-overlay-title="Open a Magnifier" { spawn-sh "boomer"; }
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
