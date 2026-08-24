@@ -1,8 +1,8 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-    "logo": {
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"logo": {
 	"type": "file-raw",
-	"source": "~/.config/fastfetch/logo/logo-chafa.txt",
+	"source": "~/.config/fastfetch/logo/logo-chafa-min.txt",
 	"color": {
 	    "1": "",
 	    "2": "",
@@ -17,8 +17,8 @@
 	"width": null,
 	"height": null,
 	"padding": {
-	    "top": 0,
-	    "left": 0,
+	    "top": 6,
+	    "left": 4,
 	    "right": 4
 	},
 	"printRemaining": true,
@@ -334,7 +334,7 @@
 	"break",
 	{
             "type": "custom",
-            "format": "┌────────────────────Age / Uptime / DT────────────────────┐",
+            "format": "┌─────────────────Age / Uptime / DT──────────────────┐",
 	    "outputColor": "#BEDBFF"
 	},
 	{
@@ -356,7 +356,7 @@
         },
 	{
             "type": "custom",
-            "format": "└─────────────────────────────────────────────────────────┘",
+            "format": "└────────────────────────────────────────────────────┘",
 	    "outputColor": "#BEDBFF"
 	},
 	"break",
