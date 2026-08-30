@@ -17,4 +17,5 @@ return {
   config = function(_, opts)
     require("nvim-tree").setup(opts)
   end,
+  enabled = false,
 }
