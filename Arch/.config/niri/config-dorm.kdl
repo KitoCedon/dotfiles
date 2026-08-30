@@ -9,8 +9,16 @@ spawn-at-startup "~/.config/niri/bin/niri-config.sh"
 spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
+    XCURSOR_THEME "Kazamata Neri"
+    XCURSOR_SIZE "32"
 }
 
+cursor {
+    xcursor-theme "Kazamata Neri"
+    // xcursor-theme "Anathema Pink"
+    // xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 32
+}
 
 // Input device configuration.
 // Find the full list of options on the wiki:
@@ -280,7 +288,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -371,6 +379,11 @@ window-rule {
 // firefox Maximize
 window-rule {
    match app-id=r#"^firefox"#
+   open-maximized true
+}
+
+window-rule {
+   match app-id=r#"VirtualBox Machine"#
    open-maximized true
 }
 
