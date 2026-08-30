@@ -28,6 +28,8 @@ return{
         { "<leader>bo", ":BufferLineCloseOthers<CR>", silent = true },
         { "<leader>bp", ":BufferLinePick<CR>", silent = true },
         { "<leader>bc", ":BufferLinePickClose<CR>", silent = true },
+		{ "<leader>bmn", ":BufferLineMoveNext<CR>", silent = true },
+		{ "<leader>bmp", ":BufferLineMovePrev<CR>", silent = true }
     },
     lazy = false,
     }
