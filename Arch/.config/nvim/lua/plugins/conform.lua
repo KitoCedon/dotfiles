@@ -18,6 +18,7 @@ return {
 			css = { "prettier" },
 			typescript = { "prettier" },
 			vue = { "prettier" },
+			nginx = { "nginxfmt" },
 		},
 		formatters = {
 			unexpand = {
@@ -50,6 +51,9 @@ return {
 
 			local pkgs = {}
 			local native_cmd = { "unexpand" }
+			local mason_package_map = {
+				nginxfmt = "nginx-config-formatter",
+			}
 
 			for _, formatters in pairs(opts.formatters_by_ft) do
 				for _, i in ipairs(formatters) do
@@ -77,7 +81,10 @@ return {
 							break
 						end
 
-						local ok, pkg = pcall(registry.get_package, i)
+						-- conform formmater 名称与 mason 包名不同时进行映射
+						local mason_name = mason_package_map[i] or i
+
+						local ok, pkg = pcall(registry.get_package, mason_name)
 						if ok then
 							if not pkg:is_installed() then
 								pkg:install()
