@@ -1,0 +1,7 @@
+spawn-at-startup "dms" "run"
+
+binds {
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+A hotkey-overlay-title="Run an Application: dms" { spawn-sh "dms ipc call widget openWith launcherButton all"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen&Poweroff monitor: dms" { spawn-sh "dms ipc call lock lockAndOutputsOff"; }
+}

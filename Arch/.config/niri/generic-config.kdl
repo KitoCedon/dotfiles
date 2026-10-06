@@ -1,6 +1,6 @@
 // wallpaper
 spawn-at-startup "/usr/bin/awww-daemon"
-
+spawn-at-startup "/usr/bin/kanshi"
 input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
@@ -15,26 +15,31 @@ input {
         natural-scroll
         // accel-speed 0.2
         accel-profile "flat"
-        // scroll-method "two-finger"
+		// scroll-method "two-finger"
         // disabled-on-external-mouse
     }
+    mouse {
+        // off
+        // natural-scroll
+        accel-speed -0.833
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
 }
-
 layout {
     // Set transparent workspace background color so you see the backdrop at all times.
-	background-color "transparent"
+    background-color "transparent"
     // Set gaps around windows in logical pixels.
-	gaps 5
-
-	focus-ring {
+    gaps 5
+    focus-ring {
         // Uncomment this line to disable the focus ring.
-		on
+        on
         // How many logical pixels the ring extends out from the windows.
-		width 1
+        width 1
         // Color of the ring on the active monitor.
-		active-color "rgb(200,190,150)"
-	}
-	// Struts shrink the area occupied by windows, similarly to layer-shell panels.
+        active-color "rgb(200,190,150)"
+    }
+    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
     // You can think of them as a kind of outer gaps. They are set in logical pixels.
     // Left and right struts will cause the next window to the side to always be visible.
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
@@ -46,44 +51,38 @@ layout {
         bottom 0
     }
 }
-
 hotkey-overlay {
-	// Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-	skip-at-startup
+    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
+    skip-at-startup
 }
-
 // wallpaper-settings
 // Set the regular wallpaper on the backdrop.
 layer-rule {
-  match namespace="^awww-daemon*"
-  place-within-backdrop true
+    match namespace="^awww-daemon*"
+    place-within-backdrop true
 }
 // Optionally, disable the workspace shadows in the overview.
 overview {
-  workspace-shadow {
-    off
-  }
+    workspace-shadow {
+        off
+    }
 }
-
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
     draw-border-with-background false
 }
-
 window-rule {
     match is-focused=false
     opacity 0.93
 }
-
 // firefox maximize
 window-rule {
-	match app-id=r#"firefox-developer-edition"#
-	open-maximized true
+    match app-id="firefox-developer-edition"
+    open-maximized true
 }
-
 // virtualBox maximize
 window-rule {
-	match app-id=r#"VirtualBox Machine"#
-	open-maximized true
+    match app-id="VirtualBox Machine"
+    open-maximized true
 }
