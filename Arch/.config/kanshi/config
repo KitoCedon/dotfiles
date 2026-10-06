@@ -11,8 +11,7 @@ profile {
 	output DP-2 {
 		enable
 		scale 1.25
-		mode
-		2560x1440@240.002
+		mode 2560x1440@240.002
 		position 0,0
 	}
 	output "Invalid Vendor Codename - RTK Monitor 0x01010101" {
