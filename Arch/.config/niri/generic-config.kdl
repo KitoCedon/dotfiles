@@ -1,5 +1,6 @@
 // wallpaper
 spawn-at-startup "/usr/bin/awww-daemon"
+// monitor
 spawn-at-startup "/usr/bin/kanshi"
 input {
     // Next sections include libinput settings.
