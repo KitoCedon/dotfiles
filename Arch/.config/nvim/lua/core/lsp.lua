@@ -35,6 +35,12 @@ vim.lsp.config["vtsls"] = {
 	},
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 }
+
+-- JDTLS 配置
+-- Lombok：通过 javaagent 让 jdtls 识别 @Data/@Slf4j 等生成的代码
+vim.env.JDTLS_JVM_ARGS = "-javaagent:"
+    .. vim.fn.stdpath("data") .. "/mason/share/jdtls/lombok.jar"
+
 -- 由mason-lspconfig自动启用
 -- vim.lsp.enable('marksman')
 -- vim.lsp.enable('lua_ls')
