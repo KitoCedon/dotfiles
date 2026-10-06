@@ -2,6 +2,14 @@
 spawn-at-startup "/usr/bin/awww-daemon"
 // monitor
 spawn-at-startup "/usr/bin/kanshi"
+
+// cursor
+cursor {
+    xcursor-theme "Kazamata Neri"
+    // xcursor-theme "Anathema Pink"
+    xcursor-size 32
+}
+
 input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
