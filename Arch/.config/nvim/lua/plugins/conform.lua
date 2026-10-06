@@ -19,6 +19,7 @@ return {
 			typescript = { "prettier" },
 			vue = { "prettier" },
 			nginx = { "nginxfmt" },
+			kdl = { "kdlfmt" },
 		},
 		formatters = {
 			unexpand = {
